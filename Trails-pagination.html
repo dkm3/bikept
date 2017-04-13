@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container">
+<h2>Bicycle Trails, Paths and Lanes</h2>
+  <p>Bicycles may be ridden on any public way in Massachusetts. In addition cyclists may ride on bike trails and paths designated as multi-use paths. Cycling within the Cape Cod National Seashore subjects riders to the rules and laws set forth by the National Park Service.</p>
+  <p>Click the name of the trail or road to show some related information and guides.</p>
+
+<div class="w3-row">
+   <a href="javascript:void(0)" onclick="openTrail(event, 'Province Lands');">
+   <div class="w3-third tablink w3-bottombar w3-hover w3-padding">Province Lands</div>
+   </a>
+   <a href="javascript:void(0)" onclick="openTrail(event, 'HOM');">
+  <div class="w3-third tablink w3-bottombar w3-hover w3-padding"> Head of the Meadow</div></a>
+  <a href="javascript:void(0)" onclick="openTrail(event, 'CCRT');">
+  <div class="w3-third tablink w3-bottombar w3-hover w3-padding"> Cape Cod Rail Trail</div></a>
+</div>
+
+<div id="Province Lands" class="w3-container trail" style="display:none">
+  <h2>Province Lands</h2>
+  <p>This multi-use path, built in 1967 is a loop through the Cape Cod National Seashore full of hills, hazards and sharp turns. With spurs leading to Herring Cove, Race Point and Bennett Pond this trail is no walk in the park and suitable for cyclists with advanced to intermediate experience. Helmet use is strongly encouraged.</p>
+</div>
+
+<div id="HOM" class="w3-container trail" style="display:none">
+  <h2>Head of the Meadow</h2>
+  <p>This trail gives riders a tour of the Truro segment of the Cape Cod National Seashore.</p> 
+</div>
+
+<div id="CCRT" class="w3-container trail" style="display:none">
+  <h2>Cape Cod Rail Trail</h2>
+  <p>The Cape Cod Rail Trail is a paved, multi-use path which currently terminates in Wellfleet. The Provincetown Bike Committee is working closely with the Cape Cod Commission and the Massachusetts Department of Transportation as they complete the final leg of the trail into Provincetown.</p>
+</div>
+
+<script>
+function openTrail(evt, trailName) {
+    var i, x, tablinks;
+    x = document.getElementsByClassName("trail");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-blue", "");
+  }
+  document.getElementById(trailName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-blue";
+}
+</script>
+
+</body>
+</html>

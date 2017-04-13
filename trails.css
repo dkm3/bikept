@@ -1,0 +1,15 @@
+h4
+ .titledesc {
+    font-size: 12 px;
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: auto;
+    display: inline;
+}
+p
+ .textdesc {
+    font-size: 10 px;
+    font-weight: normal;
+    line-height: 12 px;
+    display: inline-block;
+}
